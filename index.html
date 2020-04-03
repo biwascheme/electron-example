@@ -13,14 +13,15 @@
     We are using Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
     Electron <span id="electron-version"></span>,
-    and <span id="biwa"></span>!
+    and BiwaScheme <span id="biwa-version"></span>!
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
 
     <div id="bs-console"></div>
     <script type="text/biwascheme">
-    (set-content! ($ "#biwa") "<b>BiwaScheme</b>")
+    (define document (js-ref (list-ref (js-array->list ($ "html")) 0) 'parentNode))
+    (set-content! ($ "#biwa-version") (js-ref document "biwaVersion"))
     </script>
   </body>
 </html>

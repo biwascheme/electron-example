@@ -10,3 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
     replaceText(`${type}-version`, process.versions[type])
   }
 })
+
+let BiwaScheme = require('biwascheme');
+document.biwaVersion = BiwaScheme.VERSION;
